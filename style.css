@@ -1,0 +1,328 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    background: url("bg.jpg");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#board{
+    background: linear-gradient(rgb(135, 233, 135), rgb(236, 236, 169));
+    width: 90vmin;
+    height: 92vmin;
+    border: 2px solid black;
+    display: grid;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+}
+
+.head{
+    background: linear-gradient(red, yellow);
+    border: 2px solid purple;
+    transform: scale(1.02);
+     border-radius: 8px;
+}
+.snake{
+    background-color: purple;
+    border: .23vmin solid white;
+    border-radius: 12px;
+
+}
+.food{
+    background: linear-gradient(red, purple);
+    border: .25vmin solid black;
+    border-radius: 50px;
+    
+}
+
+#scorebox{
+    position: absolute;
+    top: 9px;
+    right: 200px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: 'Rubik Bubbles', cursive;
+}
+
+#highscorebox{
+    position: absolute;
+    top: 59px;
+    
+    right: 115px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: 'Rubik Bubbles', cursive;
+}
+
+
+
+
+/*for extra small devices*/
+@media only screen and (max-width: 450px){
+    #board{
+        height: 45vmax;
+        width: 40vmax;
+        margin-right: 50px;
+        margin-left: 2px;
+    }
+    .food{
+        background: linear-gradient(rgb(246, 157, 157) , rgb(90, 45, 45));
+        border: .20vmin solid rgb(105, 43, 43);
+        border-radius: 50px;
+        height: 3vmin;
+        width: 3vmin;
+    }
+    .snake{
+        background-color: purple;
+        border: .23vmin solid white;
+        border-radius: 12px;
+        height: 3vmin;
+        width: 3vmin;
+    }
+    .head{
+        background: linear-gradient(rgb(238, 106, 106) , rgb(245, 245, 143));
+        border: 2px solid orange;
+        border-radius: 8px;
+        transform: scale(1.02);
+        height: 4vmin;
+        width: 4vmin;
+    }
+
+    #scorebox{
+        font-size: 40px;
+        position: absolute;
+        right: 20px;
+   }
+   #highscorebox{
+       font-size: 40px;
+       position: absolute;
+       right: 20px;
+
+    }
+}
+ /* for mobile phones*/
+@media only screen and (max-width: 600px){
+    
+    #board{
+        height: 75vmax;
+        width: 50vmax;
+        margin-right: 60px;
+    }
+    .food{
+        background: linear-gradient(rgb(246, 157, 157) , rgb(90, 45, 45));
+        border: .20vmin solid rgb(105, 43, 43);
+        border-radius: 50px;
+        height: 2vmin;
+        width: 2vmin;
+    }
+    .snake{
+        background-color: purple;
+        border: .23vmin solid white;
+        border-radius: 12px;
+        height: 2vmin;
+        width: 2vmin;
+    }
+    .head{
+        background: linear-gradient(rgb(238, 106, 106) , rgb(245, 245, 143));
+        border: 2px solid orange;
+        border-radius: 8px;
+        transform: scale(1.02);
+        height: 3vmin;
+        width: 3vmin;
+    }
+
+    #scorebox{
+        font-size: 25px;
+        position: absolute;
+        right: 10px;
+   }
+   #highscorebox{
+       font-size: 25px;
+       position: absolute;
+       right: 10px;
+       top: 40px;
+    }
+}
+
+/*for tablets*/
+@media only screen and (min-width: 600px){
+    #board{
+        height: 80vmin;
+        width: 45vmin;
+        right: 600px;
+    }
+    .food{
+        background: linear-gradient(rgb(246, 157, 157) , rgb(90, 45, 45));
+        border: .20vmin solid rgb(105, 43, 43);
+        border-radius: 50px;
+        height: 2vmin;
+        width: 2vmin;
+    }
+    .snake{
+        background-color: purple;
+        border: .23vmin solid white;
+        border-radius: 12px;
+        height: 2vmin;
+        width: 2vmin;
+    }
+    .head{
+        background: linear-gradient(rgb(238, 106, 106) , rgb(245, 245, 143));
+        border: 2px solid orange;
+        border-radius: 8px;
+        transform: scale(1.02);
+        height: 3vmin;
+        width: 3vmin;
+    }
+
+    #scorebox{
+        font-size: 40px;
+        position: absolute;
+        right: 20px;
+   }
+   #highscorebox{
+       font-size: 40px;
+       position: absolute;
+       right: 20px;
+    }
+}
+
+/*for landscape tablets*/
+@media only screen and (min-width: 768px){
+    #board{
+        height: 95vmin;
+        width: 65vmin;
+        margin-right: 80px;
+        margin-left: 0px;
+    }
+    .food{
+        background: linear-gradient(rgb(246, 157, 157) , rgb(90, 45, 45));
+        border: .20vmin solid rgb(105, 43, 43);
+        border-radius: 50px;
+        height: 2vmin;
+        width: 2vmin;
+    }
+    .snake{
+        background-color: purple;
+        border: .23vmin solid white;
+        border-radius: 12px;
+        height: 2vmin;
+        width: 2vmin;
+    }
+    .head{
+        background: linear-gradient(rgb(238, 106, 106) , rgb(245, 245, 143));
+        border: 2px solid orange;
+        border-radius: 8px;
+        transform: scale(1.02);
+        height: 3vmin;
+        width: 3vmin;
+    }
+
+    #scorebox{
+        font-size: 40px;
+        position: absolute;
+        right: 20px;
+   }
+   #highscorebox{
+       font-size: 40px;
+       position: absolute;
+       right: 20px;
+   }
+}
+/*for large devices*/
+@media only screen and (min-width: 992px){
+    #board{
+        height: 90vmin;
+        width: 92vmin;
+        right: 600px;
+    }
+
+    #scorebox{
+        font-size: 35px;
+        position: absolute;
+        right: 10px;
+   }
+   #highscorebox{
+       font-size: 35px;
+       position: absolute;
+       right: 10px;
+   }
+}
+
+/*for extra large devices*/
+@media only screen and (min-width: 1200px){
+    #board{
+        height: 90vmin;
+        width: 85vmin;
+        right: 600px;
+    }
+
+    #scorebox{
+         font-size: 40px;
+         position: absolute;
+         right: 20px;
+    }
+    #highscorebox{
+        font-size: 40px;
+        position: absolute;
+        right: 20px;
+   }
+}
+
+@media only screen and (min-width: 1920){
+        
+    #board{
+        background: linear-gradient(rgb(135, 233, 135), rgb(236, 236, 169));
+        width: 90vmin;
+        height: 92vmin;
+        border: 2px solid black;
+        display: grid;
+        grid-template-rows: repeat(18, 1fr);
+        grid-template-columns: repeat(18, 1fr);
+    }
+    
+    .head{
+        background: linear-gradient(red, yellow);
+        border: 2px solid purple;
+        transform: scale(1.02);
+         border-radius: 8px;
+    }
+    .snake{
+        background-color: purple;
+        border: .23vmin solid white;
+        border-radius: 12px;
+    
+    }
+    .food{
+        background: linear-gradient(red, purple);
+        border: .25vmin solid black;
+        border-radius: 50px;
+        
+    }
+    
+    #scorebox{
+        position: absolute;
+        top: 9px;
+        right: 200px;
+        font-size: 39px;
+        font-weight: bold;
+        font-family: 'Rubik Bubbles', cursive;
+    }
+    
+    #highscorebox{
+        position: absolute;
+        top: 59px;
+        
+        right: 115px;
+        font-size: 39px;
+        font-weight: bold;
+        font-family: 'Rubik Bubbles', cursive;
+    }
+}    
